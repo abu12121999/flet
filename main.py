@@ -39,8 +39,11 @@ def main(p: Page):
     _P = ElevatedButton(text="Perimetr", on_click=Perimetr)
     _S = ElevatedButton(text="Yuza", on_click=Yuza)
     _t = ElevatedButton(text=None, width=300, color='BLUE', disabled=True)
-
+    _shart = Text(
+        value="Trapetsiyaning asoslari va balandligi berilagan. Uning perimetr va yuzasini hisoblang!", size=22, color="CYAN")
     # ADD
+    p.add(Column([_shart],
+                 alignment='center'))
     p.add(Column([_a, _b, _h],
                  alignment='center'))
     p.add(Row([_P, _S],
